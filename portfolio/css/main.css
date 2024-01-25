@@ -1,0 +1,390 @@
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    height: 100%;
+    background-image: linear-gradient(#5ea0f4,#3865f2);
+}
+body {
+    min-width: 100%;
+    overflow-x: hidden;
+}
+main {
+    flex: 1 1 auto;
+}
+.footer {
+    display: flex;
+    background-image: linear-gradient(#212529,#272d31);
+    padding: 2rem;
+    width: 100%;
+    bottom: 0;
+    position: relative;
+    border-top: 1px solid #3865f2;
+}
+.header{
+    width: auto;
+    height: 100px;
+    justify-content: space-between;
+    display: flex;
+}
+.logo{
+    align-items: center;
+    margin-left: 100px;
+    margin-top: 30px;
+    animation: fade-down 1s;
+}
+.avatar{
+    vertical-align: middle;
+    width: 65px;
+    height: 65px;
+    border-radius: 40px;
+    border: none;
+    background-color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.headershadow{
+    height: 15vh;
+    filter: blur(150px);
+    background-color: #f8f8ff;
+    aspect-ratio: 5;
+    align-items: center;
+}
+.scrolldownbutton{
+    margin-right: 100px;
+    margin-top: 43px;
+    animation: fade-down 1s;
+}
+.scrolldown{
+    border-radius: 5px;
+    border: none;
+    width: 150px;
+    height: 35px;
+    background-color: white;
+    font-weight: 700;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+.scrolldownsvg{
+    width: 15px;
+    height: 13px;
+    margin-bottom: -2px;
+    position: relative;
+    animation: ScrollDown5 1.5s ease infinite;
+    background: transparent;
+}
+.scrolldown:hover{
+    box-shadow: 5px 10px 1px 1px rgba(0,0,0,0.2);
+    scale: 1.1;
+}
+.scrolldownbutton:hover{
+    scale: 1.001;
+}
+@keyframes ScrollDown5{
+    0%{
+        transform: translateY(-15px);
+        opacity: 0;
+    }
+    50%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(15px);
+        opacity: 0;
+    }
+}
+.underheader{
+    display: flex;
+    align-items: center;
+    color: #f8f8ff;
+    font-weight: 800;
+    font-size: 50px;
+    animation: fadeinright 2s;
+    margin-top: 350px;
+    text-transform: capitalize;
+    text-shadow: 0 3px 8px #00000017;
+    line-height: 50px;
+}
+.underunderheader{
+    display: flex;
+    align-items: center;
+    animation: fadeinright 2.6s;
+}
+.wavesvg{
+    scale: 0.3;
+    margin-left: -30px;
+}
+@keyframes tilt-shaking {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(0eg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+}
+.wavesvg {
+    animation: tilt-shaking 0.5s;
+    animation-iteration-count:calc(5) ;
+}
+.ikben{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f8f8ff;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    font-weight: 400;
+}
+@keyframes fade-down{
+    0%{
+        opacity: 0;
+        transform: translateY(-30px) scale(0.9);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+}
+@keyframes fade-up{
+    0%{
+        opacity: 0;
+        transform: translateY(30px) scale(0.9);
+        z-index: 5;
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+        z-index: 5;
+    }
+}
+
+.container3{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.batmanimg{
+    z-index: -0.5;
+    width: 700px;
+    background-color: transparent;
+    opacity: 1;
+    transform: scale(0.9) perspective(500px) rotateY(-10deg) rotateX(-0.5deg) rotateZ(1.5deg);    z-index: 1;
+    filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.3));
+    animation: fadeinleft2 2s;
+    margin-top: 200px;
+    scale: 1.6;
+}
+@media (max-width:1335px) {
+    .flexbox {
+      flex-wrap: wrap;
+    }
+}
+html{
+    scroll-behavior: smooth;
+}
+@keyframes fadeinright{
+    0% {
+       opacity: 0;
+       transform: translateX(-100px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateX(200);
+    }
+}
+@keyframes fadeinleft2 {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(2000px);
+        -ms-transform: translateX(2000px);
+        transform: translateX(2000px)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+        transform: scale(0.9) perspective(500px) rotateY(-10deg) rotateX(-0.5deg) rotateZ(1.5deg);
+    }
+}
+.mywork{
+    display: flex;
+    background-color: #212529;
+    height: px;
+    width: auto;
+    justify-content: center;
+}
+.tekstofmywork{
+    display: flex;
+    width: auto;
+    height: 100px;
+    color: #f8f8ff;
+    font-weight: 800;
+    font-size: 75px;
+    text-shadow: 0 1px 3px #ffffff23;
+    background-image: linear-gradient(45deg, #e4e7ff, #d5d5f373);
+    text-transform: capitalize;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.tekstofmywork1{
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    margin-top: 50px;
+}
+.undertekst{
+    display: flex;
+    width: 100%;
+    height: 750px;
+    flex-direction: column;
+    gap: 150px;
+}
+.middlepart{
+    display: flex;
+    background-color: #212529;
+    min-height: 51vw;
+    width: 100%;
+    flex-direction: column;
+}
+.toppart{
+    width: 100%;
+    min-height: 45vw;   
+}
+.bar{
+    display: flex;
+    width: 100%;
+    height: 75%;
+    background-color: #fff;
+    margin-top: 125px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+li, ul{
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    flex-direction: row;
+    gap: 25px;
+}
+.footertext{
+    color: white;
+    font-size: 25;
+    font-weight: 300;
+    text-decoration: none;
+}
+.bottompart{
+    display: flex;
+    background-color: #212529;
+    min-height: 51vw;
+    width: 100%;
+    border-top: 1px solid #3865f2;
+}
+.aboutmebutton{
+    border-radius: 5px;
+    border: none;
+    width: 150px;
+    height: 35px;
+    background-color: white;
+    font-weight: 700;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    text-decoration: none;
+    cursor: pointer;
+    /*margin-left: 200px; */
+    margin-top: 40px;
+    animation: 3s ease 0s 1 normal none running fadeinright;
+}
+.buttontext{
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 15px;
+    color: black;
+}
+.aboutmebutton:hover{
+    box-shadow: 5px 10px 1px 1px rgba(0,0,0,0.2);
+    scale: 1.1;
+}
+.container2{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin-top: 100px;
+}
+.fotovanzelf{
+    width: 350px;
+    height: 600px;
+    border-radius: 5px;
+    border: 2px solid #3865f2;
+    box-shadow: 0 0 5px #3865f2, 0 0 25px; 
+    margin-left: 400px
+}
+.textboxaboutme{
+    display: flex;
+    flex-direction: row;
+    margin-left: 75px;
+}
+.textaboutme1{
+    color: #e4e7ff;
+    font-weight: 900;
+    font-size: 50px;
+    text-transform: 25px;
+}
+.infobox{
+    width: 75%;
+    margin-top: 30px;
+    margin-left: 75px
+}
+.containerfordetext{
+    width: 50%;
+    height: 50%;
+}
+.infotext{
+    color: #fff;
+    line-height: 28px;
+    letter-spacing: 0.5px;
+    font-size: 18px;
+}
+div.bar {
+    background-color: #333;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+}
+  div.bar img {
+    padding: 10px;
+}
+  .aboutmebuttons{
+    border-radius: 5px;
+    border: none;
+    width: 150px;
+    height: 35px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 15px;
+    color: black;
+}
+.buttonmycv{
+    margin-top: 50px;
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    width: 474px;
+    flex-direction: row;
+}
+.githubsvg{
+    scale: 0.5;
+}
+.aboutmebuttons:hover{
+    box-shadow: 5px 10px 1px 1px rgba(0,0,0,0.2);
+    scale: 1.1;
+    transition: 0.3s;
+}
