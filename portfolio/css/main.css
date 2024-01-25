@@ -302,8 +302,6 @@ li, ul{
     /*margin-left: 200px; */
     margin-top: 40px;
     animation: 3s ease 0s 1 normal none running fadeinright;
-}
-.buttontext{
     text-decoration: none;
     font-weight: 700;
     font-size: 15px;
